@@ -27,4 +27,4 @@ if __name__ == "__main__":
         separator = ', '
     print()
     cur.close()
-    db.close(
+    db.close()
