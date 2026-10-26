@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Module: ORM module is going though how to use ORMs."""
 
 import MySQLdb
