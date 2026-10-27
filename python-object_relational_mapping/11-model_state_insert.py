@@ -25,4 +25,6 @@ if __name__ == "__main__":
     session.execute(entry)
     session.commit()
 
+    result = session.query(State).order_by(State.id.desc()).first()
+    print("{}".format(result.id))
     session.close()
