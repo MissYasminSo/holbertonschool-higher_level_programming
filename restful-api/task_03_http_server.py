@@ -3,6 +3,7 @@
 import json
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
+
 class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
