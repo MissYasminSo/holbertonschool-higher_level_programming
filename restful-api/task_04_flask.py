@@ -4,20 +4,26 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 
+users = {"jane": {"name": "Jane", "age": 28, "city": "Los Angeles"}}
+
+
 app = Flask(__name__)
+
+
 @app.route("/")
 def home():
     return "Welcome to the Flask API!"
 
-users = {"jane": {"name": "Jane", "age": 28, "city": "Los Angeles"}}
 
 @app.route("/data")
 def get_data():
     return jsonify(list(users.keys()))
 
+
 @app.route("/status")
 def status():
     return "OK"
+
 
 @app.route("/users/<username>")
 def get_username(username):
@@ -48,6 +54,7 @@ def add_user():
         "message": "User added",
         "user": data
     }), 201
+
 
 if __name__ == "__main__":
     app.run()
