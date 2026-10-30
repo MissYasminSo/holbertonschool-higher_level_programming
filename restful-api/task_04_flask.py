@@ -16,11 +16,11 @@ def get_data():
     return jsonify(list(users.keys()))
 
 @app.route("/status")
-def get_status():
-    return "Ok"
+def status():
+    return "OK"
 
 @app.route("/users/<username>")
-def get_username():
+def get_username(username):
     if username in users:
         return jsonify(users[username])
 
