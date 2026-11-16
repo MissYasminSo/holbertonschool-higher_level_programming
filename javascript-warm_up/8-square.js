@@ -8,7 +8,7 @@ if (isNaN(number)) {
 } else {
   const row = [];
   for (let i = number; i > 0; i--) {
-    row.push('#');
+    row.push('X');
   }
   for (let i = number; i > 0; i--) {
     console.log(row.join(''));
